@@ -1,4 +1,4 @@
-<h1>Members</h1>
+<h1>Børn i sfo</h1>
 
 <table border="1">
 {% for x in mymembers %}
@@ -8,6 +8,11 @@
     <td>{{ x.name }}</td>
     <td>{{ x.modul }}</td>
     <td>{{ x.gruppe }}</td>
+    <td>{{ x.mandag }}</td>
+    <td>{{ x.tirsdag }}</td>
+    <td>{{ x.onsdag }}</td>
+    <td>{{ x.torsdag }}</td>
+    <td>{{ x.fredag }}</td>
     <td><a href="delete/{{ x.id }}">delete</a></td>
 </tr>
 {% endfor %}
