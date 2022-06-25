@@ -42,10 +42,20 @@ def updaterecord(request, id):
   name = request.POST['name']
   modul = request.POST['modul']
   gruppe = request.POST['gruppe']
+  mandag = request.POST['mandag']
+  tirsdag = request.POST['tirsdag']
+  onsdag = request.POST['onsdag']
+  torsdag = request.POST['torsdag']
+  fredag = request.POST['fredag']
   member = Members.objects.get(id=id)
   member.name = name
   member.modul = modul
   member.gruppe = gruppe
+  member.mandag = mandag
+  member.tirsdag = tirsdag
+  member.onsdag = onsdag
+  member.torsdag = torsdag
+  member.fredag =fredag
   member.save()
   return HttpResponseRedirect(reverse('index'))
 
